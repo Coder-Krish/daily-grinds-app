@@ -4,7 +4,8 @@ import GrindList from './components/GrindList';
 import InputField from './components/InputField';
 import { Grind } from './components/models';
 import { DragDropContext, DropResult } from 'react-beautiful-dnd'
-
+import { BsGithub, BsLinkedin, BsInstagram} from 'react-icons/bs';
+ 
 const App: React.FC = () => {
   const [grind, setGrind] = useState<string>("");
   const [grinds, setGrinds] = useState<Grind[]>([]);
@@ -50,6 +51,23 @@ const App: React.FC = () => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="App">
+        <div className="social__links">
+          <span className="icon">
+            <a href="https://github.com/Coder-Krish" target="_blank" rel="noreferrer">
+            <BsGithub />
+            </a>
+          </span>
+          <span className="icon">
+            <a href="https://www.linkedin.com/in/krishna-bogati/" target="_blank" rel="noreferrer">
+            <BsLinkedin />
+            </a>
+          </span>
+          <span className="icon">
+            <a href="https://www.instagram.com/invincible_system" target="_blank" rel="noreferrer">
+            <BsInstagram />
+            </a>
+          </span>
+        </div>
         <span className="heading">Daily Grind</span>
         <InputField grind={grind} setGrind={setGrind} handleGrindAdd={handleGrindAdd} />
         <GrindList grinds={grinds} setGrinds={setGrinds} completedGrinds={completedGrinds} setCompletedGrinds={setCompletedGrinds} />
