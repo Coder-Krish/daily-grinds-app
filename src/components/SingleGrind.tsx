@@ -34,7 +34,7 @@ const SingleGrind: React.FC<Props> = ({ index, grind, grinds, setGrinds }) => {
 
   const handleGrindEdit = (e: React.FormEvent, id: number) => {
     e.preventDefault();
-    setGrinds(grinds.map((grind) => grind.id === id ? { ...grind, grind: editGrind } : grind));
+    setGrinds(grinds.map((grind) => grind.id === id ? { ...grind, grind: editGrind, currentTimeStamp: new Date() } : grind));
     setEdit(false);
   };
 
@@ -49,11 +49,14 @@ const SingleGrind: React.FC<Props> = ({ index, grind, grinds, setGrinds }) => {
               grind.isDone ? (
                 <s className="grinds__single--text">{grind.grind}</s>
               ) : (
-                <span className="grinds__single--text">{grind.grind}</span>
+                <div className='grinds__single--text'>
+                <span>{grind.grind}</span> <br />
+                <span className='grinds__single--time'>{grind.currentTimeStamp.toString()}</span>
+                </div>
               )
             )}
 
-            <div>
+            <div className='action__icons'>
               <span className="icon" onClick={() => {
                 if (!edit && !grind.isDone) {
                   setEdit(!edit);

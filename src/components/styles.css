@@ -88,11 +88,18 @@
     font-size: 20px;
   }
   
+  .grinds__single--time {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 15px;
+  }
+
   .grinds__single--text:focus {
     outline: none;
   }
-  
-  .icon {
+
+  .action__icons .icon {
     margin-left: 10px;
     font-size: 25px;
     cursor: pointer;

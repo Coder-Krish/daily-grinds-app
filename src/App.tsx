@@ -15,7 +15,7 @@ const App: React.FC = () => {
     e.preventDefault();
 
     if (grind) {
-      setGrinds([...grinds, { id: Date.now(), grind: grind, isDone: false }]);
+      setGrinds([...grinds, { id: Date.now(), grind: grind, isDone: false, currentTimeStamp: new Date() }]);
       setGrind("");
     }
   };
