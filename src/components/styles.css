@@ -1,138 +1,140 @@
 .input {
-    display: flex;
-    width: 95%;
-    position: relative;
-    align-items: center;
+  display: flex;
+  width: 95%;
+  position: relative;
+  align-items: center;
 }
 
 .input__box {
-    width: 100%;
-    border-radius: 50px;
-    padding: 20px 30px;
-    font-size: 25px;
-    border: none;
-    transition: 0.2s;
-    box-shadow: inset 0 0 5px black;
+  width: 100%;
+  border-radius: 50px;
+  padding: 20px 30px;
+  font-size: 25px;
+  border: none;
+  transition: 0.2s;
+  box-shadow: inset 0 0 5px black;
 }
 
-.input__box:focus{
-    box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
-    outline: none;
+.input__box:focus {
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+  outline: none;
 }
 
-.input__submit{
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    margin: 12px;
-    border-radius: 50px;
-    right: 0px;
-    border: none;
-    font-size: 15px;
-    background-color: #312fc0;
-    color: white;
-    transition: 0.2s all;
-    box-shadow: 0 0 10px black;
+.input__submit {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 12px;
+  border-radius: 50px;
+  right: 0px;
+  border: none;
+  font-size: 15px;
+  background-color: #312fc0;
+  color: white;
+  transition: 0.2s all;
+  box-shadow: 0 0 10px black;
 }
 
-.input__submit:hover{
-    background-color: #4421df;
-    cursor: pointer;
+.input__submit:hover {
+  background-color: #4421df;
+  cursor: pointer;
 }
 
-.input__submit:active{
-    transform: scale(0.8);
-    box-shadow: 0 0 5px black;
+.input__submit:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
 }
 
-.container{
-    display: flex;
-    width: 95%;
-    margin-top: 10px;
-    justify-content: space-between;
-    align-items: flex-start;
+.container {
+  display: flex;
+  width: 95%;
+  margin-top: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.grinds{
-    display: flex;
-    width: 47.5%;
-    flex-direction: column;
-    padding: 15px;
-    border-radius: 5px;
-    background-color: rgb(209, 62, 62);
+.grinds {
+  display: flex;
+  width: 47.5%;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgb(209, 62, 62);
 }
 
-.grinds__heading{
-    font-size: 30px;
-    color: white;
+.grinds__heading {
+  font-size: 30px;
+  color: white;
 }
 
-.grind__single{
-    display: flex;
-    border-radius:  5px;
-    padding: 20px;
-    margin-top: 15px;
-    background-image: url("https://images.unsplash.com/flagged/photo-1593005510329-8a4035a7238f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80?size=626&ext=jpg");
-    transition: 0.2s;
+.grind__single {
+  display: flex;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 15px;
+  background-image: url("https://images.unsplash.com/flagged/photo-1593005510329-8a4035a7238f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80?size=626&ext=jpg");
+  transition: 0.2s;
 }
 
-.grind__single:hover{
-    box-shadow: 0 0 5px black;
-    transform: scale(1.03);
+.grind__single:hover {
+  box-shadow: 0 0 5px black;
+  transform: scale(1.03);
 }
 
 .grinds__single--text {
-    flex: 1;
-    padding: 5px;
-    border: none;
-    font-size: 20px;
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 20px;
+}
+
+.grinds__single--time {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 15px;
+}
+
+.grinds__single--text:focus {
+  outline: none;
+}
+
+.icon {
+  margin-left: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .grinds {
+    width: 45%;
   }
-  
-  .grinds__single--time {
-    flex: 1;
-    padding: 5px;
-    border: none;
-    font-size: 15px;
+}
+
+@media (max-width: 700px) {
+  .input {
+    width: 95%;
   }
 
-  .grinds__single--text:focus {
-    outline: none;
+  .grinds {
+    width: 95%;
+    margin-bottom: 10px;
   }
 
-  .action__icons .icon {
-    margin-left: 10px;
-    font-size: 25px;
-    cursor: pointer;
+  .container {
+    width: 95%;
+    flex-direction: column;
   }
-  
-  @media (max-width: 1100px) {
-    .grinds {
-      width: 45%;
-    }
-  }
+}
 
-  @media (max-width: 700px) {
-    .input {
-      width: 95%;
-    }
-    .grinds {
-      width: 95%;
-      margin-bottom: 10px;
-    }
-    .container{
-        width: 95%;
-        flex-direction: column;
-    }
-  }
+.remove {
+  background-color: rgb(83, 80, 235);
+}
 
-  .remove{
-    background-color: rgb(83, 80, 235);
-  }
+.dragactive {
+  background-color: rgb(236, 0, 71);
+}
 
-  .dragactive{
-    background-color: rgb(236, 0, 71);
-  }
-
-  .dragcomplete{
-    background-color: rgb(0, 68, 255);
-  }
+.dragcomplete {
+  background-color: rgb(0, 68, 255);
+}
