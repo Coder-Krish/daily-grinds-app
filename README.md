@@ -7,6 +7,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This project is build to learn React with TypeScript.\
 This project is basically a kind of task management (task is named as grind in this particular project) (no persistence).\
 
+[working demo](https://daily-grinds.netlify.app/)
+
 # Installation
 
 Clone this particular repo.\
